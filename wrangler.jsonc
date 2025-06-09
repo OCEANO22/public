@@ -1,0 +1,8 @@
+{
+  "name": "public",
+  "compatibility_date": "2025-06-09",
+  "assets": { 
+    "not_found_handling": "single-page-application"
+  },
+  "main": "./api/index.ts"
+}
