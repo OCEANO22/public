@@ -5,4 +5,10 @@
     "not_found_handling": "single-page-application"
   },
   "main": "./api/index.js"
+ 
+{
+  "datbase_name": "public",
+  "database_id":"c9f1b1b7-017a-49d9-b824-f6698b6f80c1",
+  "binding": "DB"
 }
+
