@@ -11,6 +11,7 @@
       <a href="#kontak">Kontak</a>
       <a href="#jobdisk">Jobdisk</a>
       <a href="#program-kerja">Program Kerja</a>
+      <a href="#komentar">Tambah Komentar</a>
     </nav>
 
     <div class="container">
@@ -63,6 +64,24 @@
         </table>
       </section>
     </div>
+
+    <div class="container">
+  <section id="komentar">
+    <h2 align="center">Tambah Komentar</h2>
+    <form @submit.prevent="submitKomentar">
+      <input v-model="nama" placeholder="Nama Anda" required>
+      <input v-model="email" placeholder="Email Anda" type="email" required>
+      <textarea v-model="pesan" placeholder="Pesan Anda" required></textarea>
+      <button type="submit">Kirim Komentar</button>
+    </form>
+    <div class="komentar-list">
+      <div v-for="(item, index) in komentar" :key="index" class="komentar-item">
+        <h3>{{ item.nama }}</h3>
+        <p>{{ item.pesan }}</p>
+      </div>
+    </div>
+  </section>
+</div>
 
     <section id="kontak">
       <h2>Kontak Kami</h2>
@@ -117,6 +136,8 @@ const programKerja = [
     pj: 'Dev. Publik'
   }
 ]
+
+
 </script>
 
 <style scoped>
@@ -237,5 +258,54 @@ img {
 .about-section .text {
   flex: 2;
 }
-</style>
 
+  /* CSS yang sudah ada... */
+
+  /* Tambahkan di sini */
+  #komentar form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  #komentar input, 
+  #komentar textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  #komentar button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .komentar-list {
+    margin-top: 20px;
+  }
+
+  .komentar-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  /* Responsive table */
+  @media (max-width: 768px) {
+    table {
+      display: block;
+      overflow-x: auto;
+    }
+    
+    .about-section {
+      flex-direction: column;
+    }
+  }
+</style>
