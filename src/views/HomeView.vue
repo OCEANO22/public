@@ -19,7 +19,15 @@
         <img src="/seal.png" alt="public relation" />
         <div class="text">
           <h2>Tentang Kami</h2>
-          <p>PUBLIC RELATION HUMANIKA</p>
+          <p align="justify">PUBLIC RELATION HUMANIKA adalah salah satu departemen dalam struktur 
+            Himpunan Mahasiswa Informatika (HUMANIKA) Universitas Yudharta Pasuruan 
+            yang memiliki peran utama sebagai penghubung komunikasi dan informasi 
+            antara HUMANIKA dengan pihak internal maupun eksternal.
+            Sebagai wajah luar dari HUMANIKA, Public Relation bertugas menjaga 
+            citra positif, membangun relasi strategis, dan memastikan informasi organisasi 
+            tersampaikan secara baik, tepat sasaran, dan profesional.
+
+</p>
         </div>
       </section>
     </div>
