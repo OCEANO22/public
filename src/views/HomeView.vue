@@ -163,7 +163,7 @@ async function submitKomentar() {
       })
     })
 
-    // Optional: Tambahkan komentar baru ke tampilan tanpa reload
+    
     komentar.value.push({ nama: nama.value, pesan: pesan.value })
 
     // Reset form
