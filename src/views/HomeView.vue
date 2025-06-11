@@ -2,7 +2,7 @@
 <template>
   <div>
     <header>
-       alt="Logo Organisasi" />
+    <img src="/logo.png" alt="Logo Organisasi" />
       <h1>PUBLIC RELATION HUMANIKA</h1>
     </header>
 
@@ -15,7 +15,7 @@
 
     <div class="container">
       <section id="tentang" class="about-section">
-         alt="public relation" />
+        <img src="/seal.png" alt="public relation" />
         <div class="text">
           <h2>Tentang Kami</h2>
           <p>PUBLIC RELATION HUMANIKA</p>
