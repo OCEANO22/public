@@ -144,6 +144,36 @@ const programKerja = [
     pj: 'Dev. Publik'
   }
 ]
+import { ref } from 'vue'
+
+const nama = ref('')
+const email = ref('')
+const pesan = ref('')
+const komentar = ref([])
+
+async function submitKomentar() {
+  try {
+    await fetch('https://api-komentar.<subdomain>.workers.dev/api/komentar', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nama: nama.value,
+        email: email.value,
+        pesan: pesan.value
+      })
+    })
+
+    // Optional: Tambahkan komentar baru ke tampilan tanpa reload
+    komentar.value.push({ nama: nama.value, pesan: pesan.value })
+
+    // Reset form
+    nama.value = ''
+    email.value = ''
+    pesan.value = ''
+  } catch (err) {
+    console.error('Gagal mengirim komentar:', err)
+  }
+}
 
 
 </script>
