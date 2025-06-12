@@ -296,10 +296,6 @@ img {
 .about-section .text {
   flex: 2;
 }
-
-  /* CSS yang sudah ada... */
-
-  /* Tambahkan di sini */
   #komentar form {
     display: flex;
     flex-direction: column;
@@ -334,8 +330,6 @@ img {
     border-radius: 8px;
     margin-bottom: 10px;
   }
-
-  /* Responsive table */
   @media (max-width: 768px) {
     table {
       display: block;
@@ -346,4 +340,19 @@ img {
       flex-direction: column;
     }
   }
+  button[type="submit"] {
+  transition: transform 0.1s ease, background-color 0.3s ease;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.95); 
+  background-color: #555; 
+}
 </style>
