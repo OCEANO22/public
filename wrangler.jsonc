@@ -1,6 +1,6 @@
 
 {
-"name" : "api-komentar",
+"name" : "public",
 "main" : "api/index.js",
 "compatibility_date" : "2025-06-09",
 
