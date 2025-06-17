@@ -7,7 +7,7 @@
     "not_found_handling": "single-page-application"
 },
 
-"main" : "api/index.js",
+"main" : "api/index.ts",
 "d1_databases": [
   {
 	"binding": "DB",
