@@ -1,0 +1,7 @@
+-- Migration number: 0001 	 2025-06-21T08:26:15.521Z
+CREATE TABLE IF NOT EXISTS komentar (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nama TEXT NOT NULL,
+    email TEXT NOT NULL,
+    komentar TEXT NOT NULL
+);

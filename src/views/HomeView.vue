@@ -165,7 +165,7 @@ async function submitKomentar() {
     })
 
     
-    komentar.value.push({ nama: nama.value, email: email.value, pesan: pesan.value })
+    komentar.value.push({ nama: nama.value,email: email.value, pesan: pesan.value })
 
     // Reset form
     nama.value = ''
