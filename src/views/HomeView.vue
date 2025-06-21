@@ -153,7 +153,7 @@ const komentar = ref([])
 
 async function submitKomentar() {
   try {
-    await fetch('/api/komentar', {
+const response = await fetch('/api/komentar', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -164,7 +164,7 @@ async function submitKomentar() {
     })
 
     
-    komentar.value.push({ nama: nama.value, email: email.value, pesan: pesan.value })
+    komentar.value.push({ nama: nama.value, pesan: pesan.value })
 
     // Reset form
     nama.value = ''
