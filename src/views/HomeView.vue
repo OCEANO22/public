@@ -85,6 +85,7 @@
     <div class="komentar-list">
       <div v-for="(item, index) in komentar" :key="index" class="komentar-item">
         <h3>{{ item.nama }}</h3>
+        <p>{{ item.email }}</p>
         <p>{{ item.pesan }}</p>
       </div>
     </div>
@@ -153,7 +154,7 @@ const komentar = ref([])
 
 async function submitKomentar() {
   try {
-const response = await fetch('/api/komentar', {
+      await fetch('/api/komentar', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -164,7 +165,7 @@ const response = await fetch('/api/komentar', {
     })
 
     
-    komentar.value.push({ nama: nama.value, pesan: pesan.value })
+    komentar.value.push({ nama: nama.value, email: email.value, pesan: pesan.value })
 
     // Reset form
     nama.value = ''
