@@ -151,28 +151,44 @@ const email = ref('')
 const pesan = ref('')
 const komentar = ref([])
 
-async function submitKomentar() {
-  try {
-    await fetch('/api/komentar', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
+const saveData = async () => {
+    const newEshop = JSON.stringify({
         nama: nama.value,
         email: email.value,
-        pesan: pesan.value
-      })
+        pesan: pesan.value,
+        komentar: komentar.value,
     })
 
-    
-    komentar.value.push({ nama: nama.value, pesan: pesan.value })
+    const response = await fetch('/api/komentar', {
+        method:'POST',
+        body: newKomentar,
+    })
+    const data = await response.json()
 
-    // Reset form
-    nama.value = ''
-    email.value = ''
-    pesan.value = ''
-  } catch (err) {
-    console.error('Gagal mengirim komentar:', err)
-  }
+    router.push('/')
+
+// async function submitKomentar() {
+//   try {
+//     await fetch('/api/komentar', {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify({
+//         nama: nama.value,
+//         email: email.value,
+//         pesan: pesan.value
+//       })
+//     })
+
+    
+//     komentar.value.push({ nama: nama.value, pesan: pesan.value })
+
+//     // Reset form
+//     nama.value = ''
+//     email.value = ''
+//     pesan.value = ''
+//   } catch (err) {
+//     console.error('Gagal mengirim komentar:', err)
+//   }
 }
 
 
