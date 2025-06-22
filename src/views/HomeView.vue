@@ -154,7 +154,7 @@ const komentar = ref([])
 
 async function submitKomentar() {
   try {
-      await fetch('/api/komentar', {
+      await fetch("https://public.n-oceano22.workers.dev/api/komentar", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
