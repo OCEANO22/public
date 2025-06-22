@@ -20,7 +20,7 @@ app.get("/api/publics", async (c) => {
   }
 });
 
-app.post("/api/publicss", async (c) => {
+app.post("/api/publics/komentar", async (c) => {
   const newId = crypto.randomUUID();
   const input = await c.req.json<any>();
   await c.env.DB.prepare(
